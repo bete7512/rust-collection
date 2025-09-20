@@ -1,0 +1,9 @@
+Usage: rgrep [OPTIONS]... PATTERNS [FILE]...
+Search for PATTERNS in each FILE.
+Example: rgrep -i 'lorem' file.txt file2.txt
+-i, --ignore-case         ignore case distinctions in patterns and data
+    --no-ignore-case      do not ignore case distinctions (default)
+-c, --count               Count Match
+-n, --line-number         print line number with output lines
+    --line-buffered       flush output on every line
+-C  --color  highlight matches (optional, but fun)

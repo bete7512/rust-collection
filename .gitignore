@@ -1,0 +1,40 @@
+# Compiled output
+/target/
+target
+
+# Cargo package files
+**/*.rs.bk
+Cargo.lock
+
+# If you're building a library, you might want to keep Cargo.lock
+# For binaries, you should commit Cargo.lock
+
+# Backup and generated files
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# IDE/editor specific
+# VS Code
+.vscode/
+*.code-workspace
+
+# IntelliJ / CLion / RustRover
+.idea/
+*.iml
+
+# Other editors
+*.kate-swp
+*~
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Test coverage
+/coverage/
+
+# Profiling
+perf.data*
