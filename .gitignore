@@ -1,7 +1,8 @@
 # Compiled output
 /target/
 target
-
+backup.txt
+urls.db
 # Cargo package files
 **/*.rs.bk
 Cargo.lock

@@ -103,14 +103,14 @@ fn lazy_load(path: &str, pattern: &str, flags: &Flags) -> io::Result<usize> {
     }
 
     let file = fs::File::open(path_obj)?;
-    let reader = io::BufReader::new(file);
+    let reader: io::BufReader<fs::File> = io::BufReader::new(file);
 
     for (idx, line) in reader.lines().enumerate() {
         let line = line?;
         if is_match(&line, pattern, flags) {
             match_count += 1;
             if !flags.count {
-                let output_line = highlight(&line, pattern, flags);
+                let output_line: String = highlight(&line, pattern, flags);
 
                 if flags.line_number {
                     println!("{}:{}: {}", path, idx + 1, output_line);
